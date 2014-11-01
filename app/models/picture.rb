@@ -7,4 +7,4 @@ class Picture < ActiveRecord::Base
   #ファイルの拡張子を指定
   validates_attachment :photo, :content_type  => { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
-End
+end
