@@ -8,9 +8,7 @@
 <!-- show picture -->
 <p>
   <strong>Picture:</strong>
-  <%= image_tag @picture.photo.url %>
   <%= image_tag @picture.photo.url(:medium) %>
-  <%= image_tag @picture.photo.url(:thumb) %>
 </p>
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
