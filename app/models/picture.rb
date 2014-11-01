@@ -5,6 +5,11 @@ class Picture < ActiveRecord::Base
   has_attached_file :photo, :styles => { medium: "300x300>" }
 
   #ファイルの拡張子を指定
-  validates_attachment :photo, :content_type  => { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates_attachment :photo,
+            :content_type  => { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }, 
+            presence: true
+  
+  #ファイル名の存在有無
+  validates :name, presence: true
 
 end
